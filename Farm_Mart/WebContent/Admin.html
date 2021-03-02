@@ -1,0 +1,49 @@
+<!doctype html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    	<title>Admin LogIn</title>
+        <link rel="stylesheet" type="text/css" href="admin.css">
+    </head>
+        <body>
+
+            <nav class="navbar-header">
+
+                <div id="navbarname">
+                    <a href="index.html"><h2 style="color: black; padding-top: 1%;">FARM MART</h2></a>
+                </div>
+    
+                <div id="navbarlist">
+                    <a href="#" ></a>
+                </div>
+    
+                <div id="navbarlist">
+                    <a href="AboutUs.html" style="color: black; padding-bottom: 20%;" >ABOUT US</a>
+                </div>
+    
+                <div id="navbarlist">
+                    <a href="index.html" style="color: black; padding-top: 10px;" >HOME</a>
+                </div>
+               
+            </nav>
+
+            
+            <div class="loginbox">
+                <img src="profile_logo.png" class="avatar">
+                <h1>Login here</h1>
+                <form method="post" action="adminverification">
+                    <p>Username</p>
+                    <input id="username" type="text" name="username" placeholder="Enter Username" required oninvalid="this.setCustomValidity('Username cannot be empty.')" 
+                    onchange="this.setCustomValidity('')" type="text" />
+                    <p>Password</p>
+                    <input type="password" name="password" placeholder="Enter Password" required oninvalid="this.setCustomValidity('Password cannot be empty.')" 
+                    onchange="this.setCustomValidity('')" type="password">
+                    <input id="btnsubmit" type="submit" name="" value="Login">
+
+                    
+                </form>
+            </div>
+       
+        </body>
+
+</html>

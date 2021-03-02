@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            OTP VERIFICATION
+        </title>
+        <link rel="stylesheet" href="otpverification.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <div class="about-section">
+            <h1>OTP VERIFICATION</h1>
+            <p>Enter your otp to confirm your account</p>
+          </div>
+
+
+          <div class="loginbox" >
+
+            <form name="otpform" method="post" action="customer_registration_verification">
+                <h3>Re-Enter PhoneNumber</h3>
+                <input type="number" name="phonenumber" placeholder="Enter PhoneNumber" required oninvalid="this.setCustomValidity('PhoneNumber cannot be empty.')" 
+                onchange="this.setCustomValidity('')" type="text" />
+                <h3>OTP</h3>
+                <input type="number" name="otp" placeholder="Enter Otp" required oninvalid="this.setCustomValidity('Otp cannot be empty.')" 
+                onchange="this.setCustomValidity('')" type="text">
+                <input type="submit" name="" value="Verify">
+                <div id="row">
+                    <div id="coloumn">
+                        <a href="#">Resent Otp</a><br>
+                    </div>
+                    <div id="coloumn">
+                        <a href="farmer_registration.html">Create new account</a>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+
+
+          <div id="footer">
+            <p>CREATED BY TEAM-6</p>
+            <p>BRINGING GROWTH IN AGRI , A NEW AGRI PERSPECTIVE </p>
+        </div>
+    </body>
+
+</html>

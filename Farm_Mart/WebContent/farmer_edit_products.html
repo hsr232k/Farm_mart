@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Edit Products</title>
+<link rel="stylesheet" type="text/css" href="farmer_editproduct.css">
+<script>
+	var request;
+	function sendInfo() {
+		var v = document.vinform.t1.value;
+		var url = "indexajax.jsp?val=" + v;
+
+		if (window.XMLHttpRequest) {
+			request = new XMLHttpRequest();
+		} else if (window.ActiveXObject) {
+			request = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+
+		try {
+			request.onreadystatechange = getInfo;
+			request.open("GET", url, true);
+			request.send();
+		} catch (e) {
+			alert("Unable to connect to server");
+		}
+	}
+
+	function getInfo() {
+		if (request.readyState == 4) {
+			var val = request.responseText;
+			document.getElementById('hsr').innerHTML = val;
+		}
+	}
+</script>
+
+</head>
+<body>
+	<div class="header">
+		<a href="index.html" class="logo">FARM MART</a>
+		<div class="header-right">
+			<a class="active" href="index.html">Home</a> <a href="AboutUs.html">About
+				Us</a>
+		</div>
+	</div>
+	<div class="loginbox">
+
+		<form name="vinform">
+
+			<h3>Enter id :</h3><input type="text" name="t1" onkeyup="sendInfo()">
+
+		</form>
+	</div>
+
+	<span id="hsr"> </span>
+
+	<div id="footer">
+		<p>CREATED BY TEAM-6</p>
+		<p>BRINGING GROWTH IN AGRI , A NEW AGRI PERSPECTIVE</p>
+	</div>
+
+</body>
+</html>

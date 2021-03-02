@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Farmer Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="farmer_dashboard.css">
+        <body>
+            <div class="header">
+                <a href="index.html" class="logo">FARM MART</a>
+                <div class="header-right">
+                    <a class="active" href="index.html">Home</a> <a href="AboutUs.html">About Us</a> <a href="index.html">Logout</a>
+                </div>
+            </div>
+            <div class="top">
+                <h1>Happy to see you again,</h1><br>
+                <h2 id="result">name</h2>
+                <script>  
+                    if(typeof(Storage)!=="undefined") {  
+                        var name = localStorage.farmmart_username;
+                        if(name!=null){
+                            document.getElementById('result').innerHTML= localStorage.farmmart_username;
+                        }else{
+                            document.getElementById('result').innerHTML= "Farmer"; 
+                        } 
+                         
+                   }  
+                </script>
+            </div>
+            <div class="fun">
+                <div class="addproduct">
+                <a href="farmer_add_product.html">
+                <img src="add_products.jpg" alt="add product" class="image" style="width:340px;height:340px;position: relative;margin-left: 118px;">
+                </a>
+                <div class="txt_add">
+                    <p>Add Product</p>
+                </div>
+                </div>
+                <div class="editprofile">
+                <a href="farmer_edit_products.html">
+                <img src="edit_products.jpg" alt="edit" class="image"  style="width:340px;height:340px;position: relative;margin-left: 118px;">
+                </a>
+                <div class="txt_edit">
+                    <p>Edit Products</p>
+                </div>
+                </div>
+                <div class="Shop">
+                <a href="customer_dashboard.html">
+                <img src="buying.jpg" class="image" alt="shop" style="width:340px;height:340px;position: relative;margin-left: 118px;">
+                </a>
+                <div class="txt_shop">
+                    <p>Shop</p>
+                </div>
+                </div>
+                
+            </div>
+
+            <div id="footer">
+                <p>CREATED BY TEAM-6</p>
+                <p>BRINGING GROWTH IN AGRI , A NEW AGRI PERSPECTIVE</p>
+            </div>
+        </body>
+
+    </head>
+</html>

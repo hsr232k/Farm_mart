@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Add Products</title>
+        <link rel="stylesheet" type="text/css" href="farmer_addproduct.css">
+        <body>
+            <div class="header">
+                <a href="index.html" class="logo">FARM MART</a>
+                <div class="header-right">
+                    <a class="active" href="index.html">Home</a> <a href="AboutUs.html">About
+                        Us</a>
+                </div>
+            </div>
+            
+            <div class="loginbox">
+
+                <img src="cart.jpg" class="avatar">
+                <h1 style="padding: 10% 10%;">Add Products</h1>
+
+                    <form method="post" action="farmeruploadjsp" enctype="multipart/form-data">
+        
+                    <h3>U ID</h3>
+                    <input type="text" placeholder="Enter U ID" name="uid" required oninvalid="this.setCustomValidity('U Id cannot be empty.')" 
+                    onchange="this.setCustomValidity('')" type="text" ><br>
+                    
+                    <h3>Product Name</h3>
+                    <input type="text" name = "pname" placeholder="Enter Product Name"  required oninvalid="this.setCustomValidity('Name cannot be empty.')" 
+                    onchange="this.setCustomValidity('')" type="text"><br>
+                    
+                    <h3>Price</h3>
+                    <input type="text" name="price" placeholder="Enter Price" required oninvalid="this.setCustomValidity('Price cannot be empty.')" 
+                    onchange="this.setCustomValidity('')" type="text"><br>
+                    
+                    <h3>Quantity</h3>
+                    <input type="text" name="quantity" placeholder="Enter Quantity" required oninvalid="this.setCustomValidity('Quantity cannot be empty.')" 
+                    onchange="this.setCustomValidity('')" type="text"><br><br>
+                    
+                    <h3>Image of Product</h3>
+                    <input type="file" name ="photo" size =50><br><br>
+                    
+                    <input type="submit" value= "UPLOAD">
+                    
+                    <div id="createspace">
+                        <pre>  </pre>
+                    </div>
+
+                    </form>
+
+            </div>
+
+
+            <div id="footer">
+                <p>CREATED BY TEAM-6</p>
+                <p>BRINGING GROWTH IN AGRI , A NEW AGRI PERSPECTIVE</p>
+            </div>
+        </body>
+
+    </head>
+</html>

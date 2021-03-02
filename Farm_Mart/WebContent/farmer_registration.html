@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Register Form</title>
+<link rel="stylesheet" href="farmer_registration.css">
+
+<script>
+	function validateform() {
+
+		var firstname = document.myform.firstname.value;
+		var lastname = document.myform.lastname.value;
+		var email = document.myform.email.value;
+		var phno = document.myform.phno.value;
+		var password = document.myform.password.value;
+		var retype_password = document.myform.confirm_password.value;
+		var gender = document.myform.gender.value;
+		var age = document.myform.age.value;
+		var address = document.myform.address.value;
+		var district = document.myform.district.value;
+		var pincode = document.myform.pincode.value;
+
+		if (firstname == null || firstname == "" || firstname.length < 3) {
+			alert("Firstname can't be blank or Invalid");
+			return false;
+		}
+
+		else if (lastname == null) {
+			alert("Lastname cant'be empty");
+			return false;
+		} else if (email == null) {
+			alert("Email cant be empty.");
+			return false;
+		} else if (password.length < 6) {
+			alert("Password must be at least 6 characters long.");
+			return false;
+		} else if (retype_password != password) {
+			alert("Password not matched.");
+			return false;
+		} else if (phno == null || phno.length != 10) {
+			alert("Invalid Phone Number.");
+			return false;
+		}  else if (district.length < 4) {
+			alert("Enter the correct district name");
+			return false;
+		} else if (address.length < 6) {
+			alert("Address must be at least 6 characters long.");
+			return false;
+		} else if (pincode.length<6 || pincode.length>6) {
+			alert("Enter Valid Pincode");
+			return false;
+		}
+
+	}
+</script>
+
+</head>
+<body>
+
+	<div class="header">
+		<a href="index.html" class="logo">FARM MART</a>
+		<div class="header-right">
+			<a class="active" href="index.html">Home</a> <a href="AboutUs.html">About
+				Us</a>
+		</div>
+	</div>
+
+	<form name="myform" class="signup-form" method="post" action="farmer_registration"  onsubmit="return validateform()">
+
+		<div class="form-header">
+			<h1>Create Account</h1>
+		</div>
+
+		<div class="form-body">
+
+			<div class="form-group left">
+				<label for="firstname" class="label-title">First name *</label> <input
+					type="text" name="firstname" class="form-input"
+					placeholder="Enter your first name" required="required" />
+			</div>
+			<div class="form-group left">
+				<label for="lastname" class="label-title">Last name</label> <input
+					type="text" name="lastname" class="form-input"
+					placeholder="Enter your last name" />
+			</div>
+
+
+			<div class="form-group">
+				<label for="email" class="label-title">Email</label> <input
+					type="email" name="email" class="form-input"
+					placeholder="Enter your email" required="required">
+			</div>
+
+			<div class="form-group left">
+				<label for="phno" class="label-title">Phone Number*</label> <input
+					type="number" name="phno" class="form-input"
+					placeholder="Enter your phone number" required="required" />
+			</div>
+
+			<div class="horizontal-group">
+				<div class="form-group left">
+					<label for="password" class="label-title">Password *</label> <input
+						type="password" name="password" class="form-input"
+						placeholder="Enter your password" required="required">
+				</div>
+				<div class="form-group right">
+					<label for="confirm-password" class="label-title">Confirm
+						Password *</label> <input type="password" class="form-input"
+						name="confirm_password" placeholder="Enter your password again"
+						required="required">
+				</div>
+			</div>
+
+
+			<div class="form-group">
+				<label class="label-title">Gender:</label>
+				<div class="radios">
+					<span><label for="male"><input type="radio"
+							name="gender" value="male" id="male" checked> Male</label></span> <span><label
+						    for="female"><input type="radio" name="gender"
+							value="female" id="female"> Female</label></span>
+				</div>
+			</div>
+
+
+
+			<div class="horizontal-group">
+				<div class="form-group right">
+					<label for="experience" class="label-title">Age*</label> <input
+						type="number" name="age" min="18" max="80" value="18"
+						class="form-input" required="required">
+				</div>
+			</div>
+
+
+
+
+			<div class="form-group">
+				<label for="choose-file" class="label-title">Full Address*</label>
+				<textarea class="form-input" name="address" rows="4" cols="50"
+					style="height: auto" required="required"></textarea>
+			</div>
+
+
+			<div class="form-group left">
+				<label for="district" class="label-title">District</label> <input
+					type="text" name="district" class="form-input"
+					placeholder="Enter your last name" />
+			</div>
+
+
+
+			<div class="form-group left">
+				<label for="pincode" class="label-title">Pin-code*</label> <input
+					type="number" id="pincode" name="pincode"
+					pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" maxlength="6"
+					class="form-input" placeholder="Enter your pin code"
+					required="required" />
+			</div>
+			
+			<div class="form-group">
+				<label class="label-title">Home Delivery:</label>
+				<div class="radios">
+					<span><label for="yes"><input type="radio"
+							name="available" value="Available" id="avail" checked> Available</label></span> <span><label
+						    for="no"><input type="radio" name="available"
+							value="Not Available" id="noavail"> Not Available</label></span>
+				</div>
+			</div>
+			
+			<div id="createspace">
+		<pre>   </pre>
+	</div>
+
+
+			<div class="form-footer">
+				<span>* required</span>
+				<button type="submit" class="btn">Create</button>
+			</div>
+	</form>
+
+	<div id="createspace">
+		<pre>   </pre>
+	</div>
+
+
+	<div id="footer">
+		<p>CREATED BY TEAM-6</p>
+		<p>BRINGING GROWTH IN AGRI , A NEW AGRI PERSPECTIVE</p>
+	</div>
+
+</body>
+</html>
